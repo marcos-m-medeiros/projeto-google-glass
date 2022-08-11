@@ -1,9 +1,11 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
 @font-face {
     font-family: 'FonteLogo';
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(238, 238, 252);
@@ -11,6 +13,7 @@ body {
 }
 
 div#interface {
+    position: center;
     width: 900px;
     background-color: #ffffff;
     margin: -20px auto 0px auto;
@@ -34,9 +37,9 @@ a:hover {
 }
 
 header#cabecalho img#icone {
-    position: absolute;
-    left: 1280px;
-    top: 70px;
+    position: relative;
+    left: 780px;
+    top: -50px;
 }
 
 header#cabecalho {
@@ -103,7 +106,7 @@ nav#menu ul {
     text-transform: uppercase;
     position: absolute;
     top: -20px;
-    left: 750px;
+    left: 730px;
 }
 
 nav#menu li {
@@ -114,11 +117,11 @@ nav#menu li {
     transition: background-color 1s;
 }
 
-nav#menu li:hover{
+nav#menu li:hover {
     background-color: #606060;
 }
 
-nav#menu h1{
+nav#menu h1 {
     display: none;
 }
 
@@ -140,7 +143,7 @@ section#corpo {
     padding-right: 15px;
 }
 
-article#noticia-principal h2{
+article#noticia-principal h2 {
     font-size: 13pt;
     color: rgb(90, 90, 90);
     padding: 5px 0px 5px 10px;
@@ -148,7 +151,7 @@ article#noticia-principal h2{
     margin: 10px 0px 10px 0px;
 }
 
-header#cabecalho-artigo h1{
+header#cabecalho-artigo h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
     color: darkgray;
@@ -180,7 +183,7 @@ table#tabelaspec {
     margin-right: auto;
 }
 
-table#tabelaspec td{
+table#tabelaspec td {
     border: 1px solid darkgray;
     padding: 10px;
     text-align: center;
@@ -198,7 +201,7 @@ table#tabelaspec td.cd {
     background-color: lightgray;
 }
 
-table#tabelaspec caption{
+table#tabelaspec caption {
     color: rgb(116, 116, 116);
     font-size: 13pt;
     font-weight: bold;
