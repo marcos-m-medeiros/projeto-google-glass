@@ -53,7 +53,7 @@
         </section>
         <section>
             <article>
-                <form>
+                <form method="post" id="fContato" action="mailto:marcosbourdon@hotmail.com">
                     <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
                         <p><label for="cNome">Nome: </label> <input type="text" name="tNome" id="cNome" size="20"
@@ -68,27 +68,60 @@
                                 for="cMasc">Masculino</label><br />
                             <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label>
                         </fieldset>
-                        <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"> </p>
+                        <label for="cNasc">
+                            <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></p>
+                        </label>
                     </fieldset>
                     <fieldset id="endereco">
                         <legend>Endereço do Usuário</legend>
-                        <p>Logradouro: <input type="text" name="tRua" id="Crua" size="13" maxlength="80"
+                        <p>Logradouro: <input type="text" name="tRua" id="cRua" size="13" maxlength="80"
                                 placeholder="Rua, Av, Trav..."></p>
-                        <p>Número: <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
-                        <p>Estado: <input type="text" name="" id="" size="" maxlength="" placeholder=""></p>
-                        <p>Cidade: <input type="text" name="" id="" size="" maxlength="" placeholder=""></p>
+                        <p><label for="cNum">Número: </label><input type="number" name="tNum" id="cNum" min="0"
+                                max="99999"></p>
+                        <p><label for="cEst">Estado: <select name="tEst" id="cEst">
+                                    <optgroup label="Região Sudeste">
+                                        <option selected value="RJ">Rio de Janeiro</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="MG">Minas Gerais</option>
+                                    </optgroup>
+                                    <optgroup label="Região Sul">
+                                        <option value="PR">Paraná</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                    </optgroup>
+                        </p>
+                        <p><label for="cCid">Cidade: <input type="text" name="tCid" id="cCid" maxlength="40" size="20"
+                                    placeholder="Sua Cidade" list="cidades"></p>
+                                    <datalist id="cidades">
+                                        <option value="Rio de Janeiro"></option>
+                                        <option value="Nova Iguaçu"></option>
+                                        <option value="Niterói"></option>
+                                        <option value="Belford Roxo"></option>
+                                    </datalist>
                     </fieldset>
                     <fieldset>
                         <legend id="mensagem">Mensagem do Usuário</legend>
-                        Grau de Urgência:
-                        Mensagem:
+                        <label for="cUrg">
+                            <p>Grau de Urgência:
+                        </label>Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                        <label for="cMsg">
+                            <p>Mensagem:
+                        </label><textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
                     </fieldset>
                     <fieldset>
                         <legend id="pedido">Quero um Google Glass</legend>
-                        Gostaria de adquirir um Google Glass quando disponível
-                        Cor:
-                        Quantidade:
-                        Preço Total: R$
+                        <label for="cPed">
+                            <p>Gostaria de adquirir um Google Glass quando disponível</p>
+                        </label>
+                        <label for="cCor">
+                            <p>Cor:</p>
+                        </label>
+                        <label for="cQtd">
+                            <p>Quantidade:</p>
+                        </label>
+                        <label for="cTot">
+                            <p>Preço Total: R$</p>
+                        </label>
                     </fieldset>
 
                     [BOTÃO ENVIAR]
