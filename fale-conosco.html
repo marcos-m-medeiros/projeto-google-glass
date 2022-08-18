@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="_css/form.css">
 </head>
 <script>src = "_javavascript/funcoes.js"</script>
+<script>
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cQtd').value);
+        tot = qtd * 1500;
+        document.getElementById('cTot').tot;
+    }
+</script>
 
 <body>
     <div id="interface">
@@ -53,7 +60,7 @@
         </section>
         <section>
             <article>
-                <form method="post" id="fContato" action="mailto:marcosbourdon@hotmail.com">
+                <form method="post" id="fContato" action="mailto:marcosbourdon@hotmail.com" oninput="calc_total();">
                     <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
                         <p><label for="cNome">Nome: </label> <input type="text" name="tNome" id="cNome" size="20"
@@ -92,12 +99,12 @@
                         </p>
                         <p><label for="cCid">Cidade: <input type="text" name="tCid" id="cCid" maxlength="40" size="20"
                                     placeholder="Sua Cidade" list="cidades"></p>
-                                    <datalist id="cidades">
-                                        <option value="Rio de Janeiro"></option>
-                                        <option value="Nova Iguaçu"></option>
-                                        <option value="Niterói"></option>
-                                        <option value="Belford Roxo"></option>
-                                    </datalist>
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova Iguaçu"></option>
+                            <option value="Niterói"></option>
+                            <option value="Belford Roxo"></option>
+                        </datalist>
                     </fieldset>
                     <fieldset>
                         <legend id="mensagem">Mensagem do Usuário</legend>
@@ -106,25 +113,26 @@
                         </label>Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
                         <label for="cMsg">
                             <p>Mensagem:
-                        </label><textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                        </label><textarea name="tMsg" id="cMsg" cols="45" rows="5"
+                            placeholder="Deixe aqui sua mensagem"></textarea></p>
                     </fieldset>
                     <fieldset>
                         <legend id="pedido">Quero um Google Glass</legend>
-                        <label for="cPed">
-                            <p>Gostaria de adquirir um Google Glass quando disponível</p>
+                        <p><input type="checkbox" name="tPed" id="cPed" checked>
+                            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível
+                        </p>
                         </label>
                         <label for="cCor">
-                            <p>Cor:</p>
+                            <p>Cor: <input type="color" name="tCor" id="cCor" value="#0000FF"></p>
                         </label>
                         <label for="cQtd">
-                            <p>Quantidade:</p>
+                            <p>Quantidade <input type="number" name="tQtd" id="cQtd" min="0" max="5"></p>
                         </label>
                         <label for="cTot">
-                            <p>Preço Total: R$</p>
+                            <p>Preço Total: R$ <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
                         </label>
                     </fieldset>
-
-                    [BOTÃO ENVIAR]
+                    <input type="image" name="tEnviar" src="_imagens/botao-enviar.png" >
                 </form>
             </article>
         </section>
